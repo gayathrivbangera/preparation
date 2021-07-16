@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gayathri.preparation">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".launchmode.BaseActivity" />
+        <activity
+            android:name=".launchmode.ActivityH"
+            android:launchMode="standard" />
+        <activity
+            android:name=".launchmode.ActivityG"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".launchmode.ActivityF"
+            android:launchMode="standard" />
+        <activity
+            android:name=".launchmode.ActivityE"
+            android:launchMode="standard" />
+        <activity
+            android:name=".launchmode.ActivityD"
+            android:launchMode="singleTask"
+            android:taskAffinity="super.important" />
+        <activity
+            android:name=".launchmode.ActivityC"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".launchmode.ActivityB"
+            android:launchMode="singleTask"
+            android:taskAffinity="super.important" />
+        <activity
+            android:name=".launchmode.ActivityA"
+            android:launchMode="standard" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
