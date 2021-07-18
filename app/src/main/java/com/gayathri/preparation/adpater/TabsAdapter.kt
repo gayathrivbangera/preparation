@@ -1,19 +1,14 @@
 package com.gayathri.preparation.adpater
 
-import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.gayathri.preparation.R
-import com.gayathri.preparation.launchmode.TabElement
 
-class TabsAdapter(private val data: List<TabElement> = emptyList()) :
+class TabsAdapter(private val data: List<String> = emptyList()) :
     RecyclerView.Adapter<TabsAdapter.TabsViewHolder>() {
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TabsViewHolder {
         val view =
@@ -31,14 +26,10 @@ class TabsAdapter(private val data: List<TabElement> = emptyList()) :
 
         private var name: TextView = view.findViewById(R.id.tvName)
 
-        fun setData(tabElement: TabElement) {
+        fun setData(tabElement: String) {
             name.apply {
-//                append("Activity")
-//                append(" ")
-//                append(tabElement.name)
-                text = "Activity ${tabElement.name} \n ${tabElement.launchMode}"
                 setOnClickListener {
-                    startActivity(context, Intent(context, tabElement.target), null)
+//                    startActivity(context, Intent(context, tabElement.target), null)
                 }
             }
         }

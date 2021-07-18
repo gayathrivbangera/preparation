@@ -1,6 +1,5 @@
 package com.gayathri.preparation.components
 
-import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
